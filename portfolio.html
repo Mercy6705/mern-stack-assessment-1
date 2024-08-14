@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mercy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #e6e6fa;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header .logo h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+
+        .portfolio-grid, .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .portfolio-item, .skill-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(50% - 40px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item h3, .skill-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #hero {
+            background-color: #e0f2f1;
+        }
+
+        #portfolio {
+            background-color: #e8f5e9;
+        }
+
+        #about {
+            background-color: #fff9c4;
+        }
+
+        #skills {
+            background-color: #e0f7fa;
+        }
+
+        .skill-item h3 {
+            font-size: 1.6em;
+        }
+
+        .skill-item p {
+            font-size: 1.2em;
+        }
+
+        #contact {
+            background-color: #fce4ec;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info, .contact-form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p, .contact-form input, .contact-form textarea {
+            font-size: 1.1em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #e6e6fa;
+            text-align: center;
+            padding: 10px 20px;
+            border-top: 1px solid #ddd;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mercy</h1><br>
+            <h3 style="align-items: center;">Web Developer</h3><br><br>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('about'); return false;">About</a></li>
+                <li><a href="#" onclick="showSection('portfolio'); return false;">Project</a></li>
+                <li><a href="#" onclick="showSection('skills'); return false;">Skills</a></li>
+                <li><a href="#" onclick="showSection('contact'); return false;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="section-container">
+        <h2 style="font-size: xx-large;">Welcome to My Portfolio</h2>
+            <p style="font-size: xx-large;">I’m Mercy, a developer and designer. <br>Explore my projects and get to know my work.</p>
+            <div style="flex: 1; display: flex; justify-content: flex-end;">
+            <img src="https://i.pinimg.com/474x/99/e6/5d/99e65d2830174f33ae9dc150ba82f476.jpg" alt="Portfolio Image" style="width: 300px; height: 300px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: block; margin: auto;" />
+        </div>
+    </section>
+
+    <section id="about" class="section-container" style="display:none;">
+        <h2>About Me</h2>
+        
+        <div class="hero-content">
+            <p style="font-size: xx-large;">Hello! I'm Mercy, a passionate web developer with a love for creating dynamic and user-friendly websites.</p>
+        <p style="font-size: xx-large;">I'm currently pursuing a Bachelor's degree in Computer Science at VIGNAN University.</p>
+        <p style="font-size: xx-large;">I have a strong passion for working with HTML, CSS, and JavaScript.</p>
+             </div>
+    </section>
+
+    <section id="portfolio" class="section-container" style="display:none;">
+        <h2>Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>Personal Blog</h3>
+                <p>A blog to share thoughts and ideas on technology and design.</p>
+                <a href="https://www.digitalvidya.com/blog/wp-content/uploads/2019/03/personal-blog.jpg" >View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <h3>Online Store</h3>
+                <p>An e-commerce site with a clean and functional shopping experience.</p>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2cJm5V0Ln_bVtbA6V2Om6DdTL_rm8WWPNjw&s">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <h3>Task Manager</h3>
+                <p>An app to help users manage tasks efficiently.</p>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHds9LFZNeDyd0p0nvQOwDQvGvo4Aua0sEsw&s">View Project</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="skills" class="section-container" style="display:none;">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <h3>HTML & CSS</h3>
+                <p>Expert in creating well-structured and responsive web pages using HTML and CSS.</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <p>Proficient in adding interactivity and dynamic functionality to websites with JavaScript.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Java</h3>
+                <p>Experienced in building robust applications and solutions with Java programming language.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Python</h3>
+                <p>Skilled in scripting and developing applications using Python, with a focus on data manipulation and automation.</p>
+            </div>
+            <div class="skill-item">
+                <h3>C</h3>
+                <p>Strong understanding of C for system-level programming and performance optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-container" style="display:none;">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out if you have any questions or projects in mind.</p>
+        <div class="contact-details">
+            <div class="contact-info"><br>
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:mercysikhinam@gmail.com">mercysikhinam@gmail.com</a></p><br>
+                <p>Phone: <a href="tel:+123456789">+91 739-627-0927</a></p><br>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/sikhinammercy" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Mercy6705/Mercy6705.github.io" target="_blank"><i class="fab fa-github"></i></a>
+                </div><br>
+            </div>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mercy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-container').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Optionally show the hero section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('hero');
+        });
+    </script>
+</body>
+</html>
